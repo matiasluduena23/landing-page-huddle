@@ -1,0 +1,83 @@
+---
+import Navbar from './Navbar.astro';
+import img from '../assets/illustration-mockups.svg';
+import { Image } from 'astro:assets';
+import Button from './Button.astro';
+---
+
+<header>
+    <Navbar />
+    <div class="container hero">
+        <div class="wrap-text">
+            <h1>Build The Community Your Fans Will Love</h1>
+            <p>
+                Huddle re-imagines the way we build communities. You have a
+                voice, but so does your audience. Create connections with your
+                users as you engage in genuine discussion.
+            </p>
+            <Button />
+        </div>
+        <div class="wrap-image">
+            <Image src={img} alt="devices picture" />
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        background: url('../assets/bg-hero-mobile.svg');
+        background-color: var(--very-pale-cyan);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        text-align: center;
+        padding-block: 1rem 4rem;
+    }
+
+    .wrap-text {
+        margin-block: 3rem;
+        padding-inline: 1rem;
+    }
+
+    h1 {
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        color: var(--very-dark-cyan);
+        line-height: 1.4;
+    }
+
+    p {
+        margin-block: 1.5rem;
+        color: var(--very-dark-cyan);
+    }
+
+    .wrap-image img {
+        height: 100%;
+    }
+
+    @media (min-width: 768px) {
+        header {
+            background: url('../assets/bg-hero-desktop.svg');
+            background-color: var(--very-pale-cyan);
+            background-position: bottom;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding-top: 2rem;
+        }
+
+        .wrap-text {
+            text-align: start;
+            width: 45%;
+        }
+
+        .wrap-image img {
+            height: auto;
+        }
+
+        .wrap-image {
+            width: 55%;
+        }
+    }
+</style>

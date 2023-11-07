@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+:root {
+  --pink: hsl(322, 100%, 66%);
+ 
+  --very-pale-cyan: hsl(193, 100%, 96%);
+  --very-dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+
+
+  --ff: 'Open Sans', sans-serif;
+  --ff-2: 'Poppins', sans-serif;
+
+}
+
+
+body {
+  font-family: var(--ff);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@media(min-width: 768px) {
+  body{
+
+    font-size: 18px;
+  }
+}
+
+input, select, textarea, button{font-family:inherit;}
+
+.container {
+  width: min(90%, 1100px);
+  margin-inline: auto;
+}
+
+h1,h2,h3,h4 {
+  line-height: 1.1;
+  font-family: var(--ff-2);
+}
+
+a {
+  text-decoration: none;
+}
+
+li { 
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-auto{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+       
+
+.hamburger[aria-expanded="true"] + #navbar {
+  transform: translateX(0);
+}
+
+
+@media (min-width: 768px) {
+  main article:nth-child(2) {
+    flex-direction: row;
+}
+}
+
+
+@media (min-width: 992px) {
+  main article:nth-child(2) {
+    padding-left: 6rem;
+  }
+  
+  main article:nth-child(2) .card-text {
+    padding-left: 0;
+  }
+}

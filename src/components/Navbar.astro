@@ -1,0 +1,43 @@
+---
+import logo from '../assets/logo.svg';
+---
+
+<div class="container">
+    <nav class="flex">
+        <a href="/" class="logo">
+            <img src={logo.src} alt="logo" />
+        </a>
+        <button>Try It Free</button>
+    </nav>
+</div>
+
+<style>
+    nav {
+        padding-block: 1.7rem;
+    }
+
+    a {
+        max-width: 100px;
+    }
+
+    button {
+        border: none;
+        padding: 0.3rem 1.3rem;
+        border-radius: 30px;
+        font-weight: 700;
+        background-color: white;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: color 100ms ease-in-out;
+    }
+
+    button:hover {
+        color: var(--grayish-blue);
+    }
+
+    @media (min-width: 768px) {
+        button {
+            padding: 0.7rem 3rem;
+        }
+    }
+</style>

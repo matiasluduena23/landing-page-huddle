@@ -1,0 +1,26 @@
+---
+import CardInfo from './CardInfo.astro';
+
+import { getCollection } from 'astro:content';
+
+const allInfo = await getCollection('cardinfo');
+---
+
+<main>
+    <div class="container">
+        <div class="grid">
+            {allInfo.map((info) => <CardInfo data={info.data} />)}
+        </div>
+    </div>
+</main>
+
+<style>
+    main {
+        margin-block: 3.5rem;
+    }
+
+    .grid {
+        display: grid;
+        gap: 2rem;
+    }
+</style>

@@ -1,0 +1,48 @@
+---
+import locationIcon from '../assets/icon-location.svg';
+import phoneIcon from '../assets/icon-phone.svg';
+import emailIcon from '../assets/icon-email.svg';
+---
+
+<address class="contact-info">
+    <div class="location info">
+        <img src={locationIcon.src} alt="" />
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+        </p>
+    </div>
+    <div class="phone info">
+        <img src={phoneIcon.src} alt="" />
+        <p>+1-543-123-4567</p>
+    </div>
+    <div class="email info">
+        <img src={emailIcon.src} alt="" />
+        <p>example@huddle.com</p>
+    </div>
+</address>
+
+<style>
+    .contact-info {
+        font-style: normal;
+        font-size: 15px;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .info + .info {
+        margin-block: 1.5rem;
+    }
+
+    .location {
+        align-items: start;
+    }
+
+    .location img {
+        margin-bottom: 6px;
+    }
+</style>
